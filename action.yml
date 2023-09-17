@@ -13,9 +13,9 @@ inputs:
     required: true
   webhook_url:
     description: 'Slack webhook url'
-    required: true
+    required: false
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
 branding:
   icon: git-merge
