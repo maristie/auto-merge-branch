@@ -12,10 +12,6 @@ GitHub action to automatically merge the source branch into a target branch ever
 
 **Required** Target branch for the merge
 
-### `webhook_url`
-
-**Optional** The Slack webhook URL to post to.
-
 
 ## Example usage
 
@@ -33,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: merge
         uses: mtanzi/action-automerge@v1
         id: merge
@@ -41,7 +37,6 @@ jobs:
           github_token: ${{ github.token }}
           source: 'master'
           target: 'release'
-          webhook_url: #if present add the Slack webhook
 ```
 
 ## Build
